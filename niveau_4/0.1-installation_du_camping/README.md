@@ -12,20 +12,21 @@ L'optimisation de cette solution naïve consiste en deux choses :
 ## Solution "géométrique"
 Une seconde approche du problème est construite sur une observation géométrique :   
 Soit un sous-rectangle `sr` du camping et un points avec trop de monstiques (dit "point de coupures").  
-Alors la taille maximale d'un carré de sr est égale à la taille maximale parmis les quatres sous-rectangles suivants, notés sr1, ..., sr4 :
+Alors la taille maximale d'un carré de sr est égale à la taille maximale parmis les quatres sous-rectangles suivants, notés sr1, ..., sr4 :  
 
-<div align="center">![](pics/schema-geometrique-fond-blanc.png)</div>
+<p align="center"><img src="pics/schema-geometrique-fond-blanc.png" width="400em"> </p>
+
 De plus, chacun de ces sous-rectangles contient strictement moins de points de coupures.
 Ainsi, par récurrence, nous pouvons obtenir les carrés sans points de coupures.
 
-<div align="center">![](pics/solution-geometrique-sans-epsilon_optimisation.png)</div>
+<p align="center"><img src="pics/solution-geometrique-sans-epsilon_optimisation.png" width="400em"> </p>
 
 Une erreure survient pour le `test 18`. J'avance que nous ne sommes pas loin de la complexité attendue et qu'une différence de parcours des possibilités permet d'obtenir la solution attendue dans le temps imparti.
 En fait avec l'actuelle implémentation l'agorithme trouve bien une solution obtimale à temps, mais "continue à boucler un peu trop".__
 On peut "réparer" cela avec un bricolage, ce qui a été fait ici : on sort de la boucle while si l'on estime qu'on a déjà "trop bouclé". Ça passe les tests mais peu satisfaisant.
 On pourrait par exemple chercher à majorer la solution obtimale, et s'arrêter une fois atteinte.
 
-<div align="center">![](pics/solution-geometrique-AVEC-epsilon_optimisation.png)</div>
+<p align="center"><img src="pics/solution-geometrique-AVEC-epsilon_optimisation.png" width="400em"> </p>
 
 ## Solution par programmation dynamique
 
@@ -45,4 +46,4 @@ Il suffit ensuite de parcourir les cases du tableau pour trouver celle qui assoc
 
 On obtient une complexité de `O(n*m)`
 
-<div align="center">![](pics/solution_prog_dyna.png)</div>
+<p align="center"><img src="pics/solution_prog_dyna.png" width="400em"> </p>
