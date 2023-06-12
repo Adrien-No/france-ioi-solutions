@@ -7,7 +7,7 @@ Ainsi pour chaque zone formée d'un point p_ij du carré l'on essaie d'étendre 
 L'optimisation de cette solution naïve consiste en deux choses : 
     * L'on retient les points du carrés sur la diagonale bas-droite partant du point p_ij étant dans un carré libre et l'on ne traite pas ces points.  
     * soit c la taille maximale du meilleur carré trouvé jusqu'ici et un point p_ij du camping, l'on regarde d'abord si l'aggrandissement de un du carré délimité par ``(p_ij, (fst p_ij+c, snd p_ij+c))`` est possible (pas de débordement et toutes les zones sont libres) puis éventuellement nous vérifions le carré en entier.
-<p align="center"><img src="pics/solution-naive.png" width="1000em"> </p>
+<p align="center"><img src="pics/solution-naive.png" width="100em"> </p>
 
 ## Solution "géométrique"
 Une seconde approche du problème est construite sur une observation géométrique :   
