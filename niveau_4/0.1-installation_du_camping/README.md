@@ -11,7 +11,7 @@ L'optimisation de cette solution naïve consiste en deux choses :
 
 ## Solution "géométrique"
 Une seconde approche du problème est construite sur une observation géométrique :   
-Soit `sr` un sous-rectangle du camping et un points avec trop de moustiques (dit "point de coupures").  
+Soit `sr` un sous-rectangle du camping et un point p de coordonnée (i, j) comportant trop de moustiques (dit "point de coupure").  
 Alors la taille maximale d'un carré de sr est égale à la taille maximale parmis les quatres sous-rectangles suivants, notés sr1, ..., sr4 :  
 
 <p align="center"><img src="pics/schema-geometrique-fond-blanc.png" width="400em"> </p>
