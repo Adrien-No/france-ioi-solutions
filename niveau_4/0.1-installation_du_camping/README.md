@@ -22,9 +22,9 @@ Ainsi, par récurrence, nous pouvons obtenir les carrés sans points de coupures
 <p align="center"><img src="pics/solution-geometrique-sans-epsilon_optimisation.png" width="400em"> </p>
 
 Une erreure survient pour le `test 18`. J'avance que nous ne sommes pas loin de la complexité attendue et qu'une différence de parcours des possibilités permet d'obtenir la solution attendue dans le temps imparti.
-En fait avec l'actuelle implémentation l'agorithme trouve bien une solution obtimale à temps, mais "continue à boucler un peu trop".__
+En fait avec l'actuelle implémentation l'agorithme trouve bien une solution optimale à temps, mais "continue à boucler un peu trop".__
 On peut "réparer" cela avec un bricolage, ce qui a été fait ici : on sort de la boucle while si l'on estime qu'on a déjà "trop bouclé". Ça passe les tests mais peu satisfaisant.
-On pourrait par exemple chercher à majorer la solution obtimale, et s'arrêter une fois atteinte.
+On pourrait par exemple chercher à majorer la solution optimale, et s'arrêter une fois atteinte.
 
 <p align="center"><img src="pics/solution-geometrique-AVEC-epsilon_optimisation.png" width="400em"> </p>
 
